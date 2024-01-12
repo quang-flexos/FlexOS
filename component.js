@@ -1,26 +1,39 @@
 // Select all input elements and the textarea
-var headlineInput = document.getElementById('headline');
-var descriptionInput = document.getElementById('description');
-var buttonTextInput = document.getElementById('buttonText');
-var buttonLinkInput = document.getElementById('buttonLink');
+var headline = document.getElementById('headline');
+var description = document.getElementById('description');
+var bannerButton = document.getElementById('bannerButton');
+var buttonText = document.getElementById('buttonText');
+var buttonLink = document.getElementById('buttonLink');
+
+var buttonOnly = document.getElementById('cta-button-only');
+var buttonText2 = document.getElementById('buttonText2');
+var buttonLink2 = document.getElementById('buttonLink2');
 
 // Event listeners for real-time updating of the banner elements
-headlineInput.addEventListener('input', function() {
-  document.getElementById('bannerHeadline').innerText = headlineInput.value;
+headline.addEventListener('input', function() {
+  document.getElementById('bannerHeadline').innerText = headline.value;
 });
 
-descriptionInput.addEventListener('input', function() {
-  document.getElementById('bannerDescription').innerText = descriptionInput.value;
+description.addEventListener('input', function() {
+  document.getElementById('bannerDescription').innerText = description.value;
 });
 
-buttonTextInput.addEventListener('input', function() {
-  document.getElementById('bannerButton').innerText = buttonTextInput.value;
+// Event listener for real-time updating of the button 1
+buttonText.addEventListener('input', function() {
+  document.getElementById('bannerButton').innerText = buttonText.value;
 });
 
-// Event listener for real-time updating of the button link
-buttonLinkInput.addEventListener('input', function() {
-  var bannerButton = document.getElementById('bannerButton');
-  bannerButton.href = buttonLinkInput.value;
+buttonLink.addEventListener('input', function() {
+  bannerButton.href = buttonLink.value;
+});
+
+// Event listener for real-time updating of the button 2
+buttonText2.addEventListener('input', function() {
+  document.getElementById('bannerButton').innerText = buttonText2.value;
+});
+
+buttonLink2.addEventListener('input', function() {
+  buttonOnly.href = buttonLink2.value;
 });
 
 
