@@ -29,7 +29,7 @@ buttonLink.addEventListener('input', function() {
 
 // Event listener for real-time updating of the button 2
 buttonText2.addEventListener('input', function() {
-  document.getElementById('bannerButton').innerText = buttonText2.value;
+  buttonOnly.innerText = buttonText2.value;
 });
 
 buttonLink2.addEventListener('input', function() {
